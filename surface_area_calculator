@@ -1,0 +1,55 @@
+import math
+
+def pole_kwadratu(a):
+    return a * a
+
+def pole_prostokata(a, b):
+    return a * b
+
+def pole_kola(r):
+    return math.pi * r ** 2
+
+def pole_trojkata(a, h):
+    return 0.5 * a * h
+
+def pole_trapezu(a, b, h):
+    return (a + b) / 2 * h
+    
+
+while (True):
+
+    print("Możesz obliczyć pole 1. prostokąta 2. kwadratu\
+      3. trójkąta 4. trapezu\
+      lub 5. koła. 6 = zakończenie programu")
+    wybor = input("Czego pole chcesz obliczyć? Podaj cyfrę.")
+
+
+    if wybor == "1":
+        a = int(input ("Podaj a:"))
+        b = int(input ("Podaj b:"))
+        print("Pole prostokąta wynosi: ", pole_prostokata(a, b))
+
+    elif wybor == "2":
+        a = int(input ("Podaj a:"))
+        print("Pole kwadratu wynosi: ", pole_kwadratu(a))
+
+    elif wybor == "3":
+        a = float(input ("Podaj a:"))
+        h = float(input ("Podaj wysokość h:"))
+        print("Pole trójkąta wynosi: ", pole_trojkata(a, h))
+
+    elif wybor == "4":
+        a = float(input ("Podaj a:"))
+        b = float(input ("Podaj b:"))
+        h = float(input ("Podaj wysokość h:"))
+        print("Pole trapezu wynosi: ", pole_trapezu(a, b, h))
+
+    elif wybor == "5":
+        r = int(input ("Podaj r:"))
+        print("Pole kwadratu wynosi: ", pole_kola(r))
+
+    elif wybor == "6":
+        print("Papatki")
+        break
+    else:
+        print("Zły numer, paprosiu")
